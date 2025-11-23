@@ -1,0 +1,9 @@
+{
+	"name": "azuresbsfactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b24f3bdb-a41c-4a6d-b910-1ca3812f1441",
+		"tenantId": "9ef11ecb-5850-4585-9a49-fc45fba31713"
+	}
+}
