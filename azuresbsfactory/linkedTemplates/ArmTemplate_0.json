@@ -111,6 +111,726 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/DatSBS_29_08')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "FileLocation",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "tablas_sbs_29-08-2025.csv"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "0",
+						"type": "String"
+					},
+					{
+						"name": "1",
+						"type": "String"
+					},
+					{
+						"name": "2",
+						"type": "String"
+					},
+					{
+						"name": "3",
+						"type": "String"
+					},
+					{
+						"name": "4",
+						"type": "String"
+					},
+					{
+						"name": "5",
+						"type": "String"
+					},
+					{
+						"name": "6",
+						"type": "String"
+					},
+					{
+						"name": "7",
+						"type": "String"
+					},
+					{
+						"name": "8",
+						"type": "String"
+					},
+					{
+						"name": "9",
+						"type": "String"
+					},
+					{
+						"name": "10",
+						"type": "String"
+					},
+					{
+						"name": "11",
+						"type": "String"
+					},
+					{
+						"name": "12",
+						"type": "String"
+					},
+					{
+						"name": "13",
+						"type": "String"
+					},
+					{
+						"name": "14",
+						"type": "String"
+					},
+					{
+						"name": "15",
+						"type": "String"
+					},
+					{
+						"name": "16",
+						"type": "String"
+					},
+					{
+						"name": "17",
+						"type": "String"
+					},
+					{
+						"name": "18",
+						"type": "String"
+					},
+					{
+						"name": "19",
+						"type": "String"
+					},
+					{
+						"name": "MONEDA",
+						"type": "String"
+					},
+					{
+						"name": "categoria",
+						"type": "String"
+					},
+					{
+						"name": "FECHA",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/FileLocation')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DataSBS_21_11_2025')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "FileLocation",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "tablas_sbs_21-11-2025.csv"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "0",
+						"type": "String"
+					},
+					{
+						"name": "1",
+						"type": "String"
+					},
+					{
+						"name": "2",
+						"type": "String"
+					},
+					{
+						"name": "3",
+						"type": "String"
+					},
+					{
+						"name": "4",
+						"type": "String"
+					},
+					{
+						"name": "5",
+						"type": "String"
+					},
+					{
+						"name": "6",
+						"type": "String"
+					},
+					{
+						"name": "7",
+						"type": "String"
+					},
+					{
+						"name": "8",
+						"type": "String"
+					},
+					{
+						"name": "9",
+						"type": "String"
+					},
+					{
+						"name": "10",
+						"type": "String"
+					},
+					{
+						"name": "11",
+						"type": "String"
+					},
+					{
+						"name": "12",
+						"type": "String"
+					},
+					{
+						"name": "13",
+						"type": "String"
+					},
+					{
+						"name": "14",
+						"type": "String"
+					},
+					{
+						"name": "15",
+						"type": "String"
+					},
+					{
+						"name": "16",
+						"type": "String"
+					},
+					{
+						"name": "17",
+						"type": "String"
+					},
+					{
+						"name": "18",
+						"type": "String"
+					},
+					{
+						"name": "19",
+						"type": "String"
+					},
+					{
+						"name": "MONEDA",
+						"type": "String"
+					},
+					{
+						"name": "categoria",
+						"type": "String"
+					},
+					{
+						"name": "FECHA",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/FileLocation')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DataSBS_30_06')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "FileLocation",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "tablas_sbs_30-06-2025.csv"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "0",
+						"type": "String"
+					},
+					{
+						"name": "1",
+						"type": "String"
+					},
+					{
+						"name": "2",
+						"type": "String"
+					},
+					{
+						"name": "3",
+						"type": "String"
+					},
+					{
+						"name": "4",
+						"type": "String"
+					},
+					{
+						"name": "5",
+						"type": "String"
+					},
+					{
+						"name": "6",
+						"type": "String"
+					},
+					{
+						"name": "7",
+						"type": "String"
+					},
+					{
+						"name": "8",
+						"type": "String"
+					},
+					{
+						"name": "9",
+						"type": "String"
+					},
+					{
+						"name": "10",
+						"type": "String"
+					},
+					{
+						"name": "11",
+						"type": "String"
+					},
+					{
+						"name": "12",
+						"type": "String"
+					},
+					{
+						"name": "13",
+						"type": "String"
+					},
+					{
+						"name": "14",
+						"type": "String"
+					},
+					{
+						"name": "15",
+						"type": "String"
+					},
+					{
+						"name": "16",
+						"type": "String"
+					},
+					{
+						"name": "17",
+						"type": "String"
+					},
+					{
+						"name": "18",
+						"type": "String"
+					},
+					{
+						"name": "19",
+						"type": "String"
+					},
+					{
+						"name": "MONEDA",
+						"type": "String"
+					},
+					{
+						"name": "categoria",
+						"type": "String"
+					},
+					{
+						"name": "FECHA",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/FileLocation')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DataSBS_30_09')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "FileLocation",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "tablas_sbs_30-09-2025.csv"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "0",
+						"type": "String"
+					},
+					{
+						"name": "1",
+						"type": "String"
+					},
+					{
+						"name": "2",
+						"type": "String"
+					},
+					{
+						"name": "3",
+						"type": "String"
+					},
+					{
+						"name": "4",
+						"type": "String"
+					},
+					{
+						"name": "5",
+						"type": "String"
+					},
+					{
+						"name": "6",
+						"type": "String"
+					},
+					{
+						"name": "7",
+						"type": "String"
+					},
+					{
+						"name": "8",
+						"type": "String"
+					},
+					{
+						"name": "9",
+						"type": "String"
+					},
+					{
+						"name": "10",
+						"type": "String"
+					},
+					{
+						"name": "11",
+						"type": "String"
+					},
+					{
+						"name": "12",
+						"type": "String"
+					},
+					{
+						"name": "13",
+						"type": "String"
+					},
+					{
+						"name": "14",
+						"type": "String"
+					},
+					{
+						"name": "15",
+						"type": "String"
+					},
+					{
+						"name": "16",
+						"type": "String"
+					},
+					{
+						"name": "17",
+						"type": "String"
+					},
+					{
+						"name": "18",
+						"type": "String"
+					},
+					{
+						"name": "19",
+						"type": "String"
+					},
+					{
+						"name": "MONEDA",
+						"type": "String"
+					},
+					{
+						"name": "categoria",
+						"type": "String"
+					},
+					{
+						"name": "FECHA",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/FileLocation')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DataSBS_31_07')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "FileLocation",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "tablas_sbs_31-07-2025.csv"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "0",
+						"type": "String"
+					},
+					{
+						"name": "1",
+						"type": "String"
+					},
+					{
+						"name": "2",
+						"type": "String"
+					},
+					{
+						"name": "3",
+						"type": "String"
+					},
+					{
+						"name": "4",
+						"type": "String"
+					},
+					{
+						"name": "5",
+						"type": "String"
+					},
+					{
+						"name": "6",
+						"type": "String"
+					},
+					{
+						"name": "7",
+						"type": "String"
+					},
+					{
+						"name": "8",
+						"type": "String"
+					},
+					{
+						"name": "9",
+						"type": "String"
+					},
+					{
+						"name": "10",
+						"type": "String"
+					},
+					{
+						"name": "11",
+						"type": "String"
+					},
+					{
+						"name": "12",
+						"type": "String"
+					},
+					{
+						"name": "13",
+						"type": "String"
+					},
+					{
+						"name": "14",
+						"type": "String"
+					},
+					{
+						"name": "15",
+						"type": "String"
+					},
+					{
+						"name": "16",
+						"type": "String"
+					},
+					{
+						"name": "17",
+						"type": "String"
+					},
+					{
+						"name": "18",
+						"type": "String"
+					},
+					{
+						"name": "19",
+						"type": "String"
+					},
+					{
+						"name": "MONEDA",
+						"type": "String"
+					},
+					{
+						"name": "categoria",
+						"type": "String"
+					},
+					{
+						"name": "FECHA",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/FileLocation')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DataSBS_31_10')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "FileLocation",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "tablas_sbs_31-10-2025.csv"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "0",
+						"type": "String"
+					},
+					{
+						"name": "1",
+						"type": "String"
+					},
+					{
+						"name": "2",
+						"type": "String"
+					},
+					{
+						"name": "3",
+						"type": "String"
+					},
+					{
+						"name": "4",
+						"type": "String"
+					},
+					{
+						"name": "5",
+						"type": "String"
+					},
+					{
+						"name": "6",
+						"type": "String"
+					},
+					{
+						"name": "7",
+						"type": "String"
+					},
+					{
+						"name": "8",
+						"type": "String"
+					},
+					{
+						"name": "9",
+						"type": "String"
+					},
+					{
+						"name": "10",
+						"type": "String"
+					},
+					{
+						"name": "11",
+						"type": "String"
+					},
+					{
+						"name": "12",
+						"type": "String"
+					},
+					{
+						"name": "13",
+						"type": "String"
+					},
+					{
+						"name": "14",
+						"type": "String"
+					},
+					{
+						"name": "15",
+						"type": "String"
+					},
+					{
+						"name": "16",
+						"type": "String"
+					},
+					{
+						"name": "17",
+						"type": "String"
+					},
+					{
+						"name": "18",
+						"type": "String"
+					},
+					{
+						"name": "19",
+						"type": "String"
+					},
+					{
+						"name": "MONEDA",
+						"type": "String"
+					},
+					{
+						"name": "categoria",
+						"type": "String"
+					},
+					{
+						"name": "FECHA",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/FileLocation')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SbsData')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -233,7 +953,400 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "SbsData",
+						"name": "Succes",
+						"type": "WebActivity",
+						"dependsOn": [
+							{
+								"activity": "DataSBS21_11",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"method": "POST",
+							"headers": {},
+							"url": "https://prod-13.eastus.logic.azure.com:443/workflows/d58ddae8b90e4303a6c15f9752543660/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=R63J4SCRbRXBtREBbB9NvPQ9ZTmof2tqurK70cTdeWU",
+							"body": {
+								"value": "{\n    \"pipelineName\":\"@{pipeline().Pipeline}\",\n    \"status\":\"Succeeded\",\n    \"runId\":\"@{pipeline().RunId}\",\n    \"time\": \"@{utcNow()}\"\n}",
+								"type": "Expression"
+							}
+						}
+					},
+					{
+						"name": "Fail",
+						"type": "WebActivity",
+						"dependsOn": [
+							{
+								"activity": "DataSBS21_11",
+								"dependencyConditions": [
+									"Failed"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"method": "POST",
+							"headers": {},
+							"url": "https://prod-13.eastus.logic.azure.com:443/workflows/d58ddae8b90e4303a6c15f9752543660/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=R63J4SCRbRXBtREBbB9NvPQ9ZTmof2tqurK70cTdeWU",
+							"body": {
+								"value": "{\n    \"pipelineName\":\"@{pipeline().Pipeline}\",\n    \"status\":\"Fail\",\n    \"runId\":\"@{pipeline().RunId}\",\n    \"time\": \"@{utcNow()}\"\n}",
+								"type": "Expression"
+							}
+						}
+					},
+					{
+						"name": "DataSBS21_11",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "DataSBS31-10",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "FileServerReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "DataSBS_21_11_2025",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "Sink",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "DataSBS31-10",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "DataSBS_30_09",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "FileServerReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "DataSBS_31_10",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "Sink",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "DataSBS_30_09",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "DatSBS_29_08",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "FileServerReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "DataSBS_30_09",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "Sink",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "DatSBS_29_08",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "DataSBS_31_07",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "FileServerReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "DatSBS_29_08",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "Sink",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "DataSBS_31_07",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "DataSBS_30_06",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "FileServerReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "DataSBS_31_07",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "Sink",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "DataSBS_30_06",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -279,7 +1392,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "SbsData",
+								"referenceName": "DataSBS_30_06",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -291,64 +1404,6 @@
 								"parameters": {}
 							}
 						]
-					},
-					{
-						"name": "Succes",
-						"type": "WebActivity",
-						"dependsOn": [
-							{
-								"activity": "SbsData",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"method": "POST",
-							"headers": {},
-							"url": "https://prod-13.eastus.logic.azure.com:443/workflows/d58ddae8b90e4303a6c15f9752543660/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=R63J4SCRbRXBtREBbB9NvPQ9ZTmof2tqurK70cTdeWU",
-							"body": {
-								"value": "{\n    \"pipelineName\":\"@{pipeline().Pipeline}\",\n    \"status\":\"Succeeded\",\n    \"runId\":\"@{pipeline().RunId}\",\n    \"time\": \"@{utcNow()}\"\n}",
-								"type": "Expression"
-							}
-						}
-					},
-					{
-						"name": "Fail",
-						"type": "WebActivity",
-						"dependsOn": [
-							{
-								"activity": "SbsData",
-								"dependencyConditions": [
-									"Failed"
-								]
-							}
-						],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"method": "POST",
-							"headers": {},
-							"url": "https://prod-13.eastus.logic.azure.com:443/workflows/d58ddae8b90e4303a6c15f9752543660/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=R63J4SCRbRXBtREBbB9NvPQ9ZTmof2tqurK70cTdeWU",
-							"body": {
-								"value": "{\n    \"pipelineName\":\"@{pipeline().Pipeline}\",\n    \"status\":\"Fail\",\n    \"runId\":\"@{pipeline().RunId}\",\n    \"time\": \"@{utcNow()}\"\n}",
-								"type": "Expression"
-							}
-						}
 					}
 				],
 				"policy": {
@@ -357,8 +1412,13 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/SbsData')]",
-				"[concat(variables('factoryId'), '/datasets/Sink')]"
+				"[concat(variables('factoryId'), '/datasets/DataSBS_21_11_2025')]",
+				"[concat(variables('factoryId'), '/datasets/Sink')]",
+				"[concat(variables('factoryId'), '/datasets/DataSBS_31_10')]",
+				"[concat(variables('factoryId'), '/datasets/DataSBS_30_09')]",
+				"[concat(variables('factoryId'), '/datasets/DatSBS_29_08')]",
+				"[concat(variables('factoryId'), '/datasets/DataSBS_31_07')]",
+				"[concat(variables('factoryId'), '/datasets/DataSBS_30_06')]"
 			]
 		},
 		{
