@@ -3,7 +3,388 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "SbsData",
+				"name": "Succes",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "DataSBS21_11",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://prod-13.eastus.logic.azure.com:443/workflows/d58ddae8b90e4303a6c15f9752543660/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=R63J4SCRbRXBtREBbB9NvPQ9ZTmof2tqurK70cTdeWU",
+					"body": {
+						"value": "{\n    \"pipelineName\":\"@{pipeline().Pipeline}\",\n    \"status\":\"Succeeded\",\n    \"runId\":\"@{pipeline().RunId}\",\n    \"time\": \"@{utcNow()}\"\n}",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Fail",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "DataSBS21_11",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://prod-13.eastus.logic.azure.com:443/workflows/d58ddae8b90e4303a6c15f9752543660/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=R63J4SCRbRXBtREBbB9NvPQ9ZTmof2tqurK70cTdeWU",
+					"body": {
+						"value": "{\n    \"pipelineName\":\"@{pipeline().Pipeline}\",\n    \"status\":\"Fail\",\n    \"runId\":\"@{pipeline().RunId}\",\n    \"time\": \"@{utcNow()}\"\n}",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "DataSBS21_11",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "DataSBS31-10",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "FileServerReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DataSBS_21_11_2025",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Sink",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "DataSBS31-10",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "DataSBS_30_09",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "FileServerReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DataSBS_31_10",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Sink",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "DataSBS_30_09",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "DatSBS_29_08",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "FileServerReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DataSBS_30_09",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Sink",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "DatSBS_29_08",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "DataSBS_31_07",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "FileServerReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DatSBS_29_08",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Sink",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "DataSBS_31_07",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "DataSBS_30_06",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "FileServerReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DataSBS_31_07",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Sink",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "DataSBS_30_06",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -49,7 +430,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SbsData",
+						"referenceName": "DataSBS_30_06",
 						"type": "DatasetReference"
 					}
 				],
@@ -59,62 +440,6 @@
 						"type": "DatasetReference"
 					}
 				]
-			},
-			{
-				"name": "Succes",
-				"type": "WebActivity",
-				"dependsOn": [
-					{
-						"activity": "SbsData",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"method": "POST",
-					"url": "https://prod-13.eastus.logic.azure.com:443/workflows/d58ddae8b90e4303a6c15f9752543660/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=R63J4SCRbRXBtREBbB9NvPQ9ZTmof2tqurK70cTdeWU",
-					"body": {
-						"value": "{\n    \"pipelineName\":\"@{pipeline().Pipeline}\",\n    \"status\":\"Succeeded\",\n    \"runId\":\"@{pipeline().RunId}\",\n    \"time\": \"@{utcNow()}\"\n}",
-						"type": "Expression"
-					}
-				}
-			},
-			{
-				"name": "Fail",
-				"type": "WebActivity",
-				"dependsOn": [
-					{
-						"activity": "SbsData",
-						"dependencyConditions": [
-							"Failed"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"method": "POST",
-					"url": "https://prod-13.eastus.logic.azure.com:443/workflows/d58ddae8b90e4303a6c15f9752543660/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=R63J4SCRbRXBtREBbB9NvPQ9ZTmof2tqurK70cTdeWU",
-					"body": {
-						"value": "{\n    \"pipelineName\":\"@{pipeline().Pipeline}\",\n    \"status\":\"Fail\",\n    \"runId\":\"@{pipeline().RunId}\",\n    \"time\": \"@{utcNow()}\"\n}",
-						"type": "Expression"
-					}
-				}
 			}
 		],
 		"annotations": []

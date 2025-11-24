@@ -1,0 +1,115 @@
+{
+	"name": "DataSBS_31_07",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FileLocation",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": "tablas_sbs_31-07-2025.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "0",
+				"type": "String"
+			},
+			{
+				"name": "1",
+				"type": "String"
+			},
+			{
+				"name": "2",
+				"type": "String"
+			},
+			{
+				"name": "3",
+				"type": "String"
+			},
+			{
+				"name": "4",
+				"type": "String"
+			},
+			{
+				"name": "5",
+				"type": "String"
+			},
+			{
+				"name": "6",
+				"type": "String"
+			},
+			{
+				"name": "7",
+				"type": "String"
+			},
+			{
+				"name": "8",
+				"type": "String"
+			},
+			{
+				"name": "9",
+				"type": "String"
+			},
+			{
+				"name": "10",
+				"type": "String"
+			},
+			{
+				"name": "11",
+				"type": "String"
+			},
+			{
+				"name": "12",
+				"type": "String"
+			},
+			{
+				"name": "13",
+				"type": "String"
+			},
+			{
+				"name": "14",
+				"type": "String"
+			},
+			{
+				"name": "15",
+				"type": "String"
+			},
+			{
+				"name": "16",
+				"type": "String"
+			},
+			{
+				"name": "17",
+				"type": "String"
+			},
+			{
+				"name": "18",
+				"type": "String"
+			},
+			{
+				"name": "19",
+				"type": "String"
+			},
+			{
+				"name": "MONEDA",
+				"type": "String"
+			},
+			{
+				"name": "categoria",
+				"type": "String"
+			},
+			{
+				"name": "FECHA",
+				"type": "String"
+			}
+		]
+	}
+}
